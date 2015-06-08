@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qm3-MO-Z8g">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photos-->
+        <scene sceneID="8wV-xq-jGr">
+            <objects>
+                <viewController title="Photos" id="Qm3-MO-Z8g" customClass="NBPhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M6y-Oh-Dzx"/>
+                        <viewControllerLayoutGuide type="bottom" id="A4h-0O-tp8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mlG-vJ-EIa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fXs-af-5uO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZOM-h0-cLO">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="67" maxX="10" maxY="30"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="6Az-pK-eto" customClass="NBCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bJY-9I-ZKA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="bJY-9I-ZKA" secondAttribute="bottom" constant="-8" id="1EA-6m-vKA"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="bJY-9I-ZKA" secondAttribute="trailing" constant="-8" id="5fN-Xy-gVE"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="bJY-9I-ZKA" secondAttribute="bottom" constant="-8" id="K4u-xZ-b6s"/>
+                                            <constraint firstItem="bJY-9I-ZKA" firstAttribute="top" secondItem="6Az-pK-eto" secondAttribute="topMargin" constant="-8" id="P9o-t8-uYJ"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="bJY-9I-ZKA" secondAttribute="trailing" constant="-8" id="Ruc-p3-Zob"/>
+                                            <constraint firstItem="bJY-9I-ZKA" firstAttribute="leading" secondItem="6Az-pK-eto" secondAttribute="leadingMargin" constant="-8" id="d2X-LC-osh"/>
+                                            <constraint firstItem="bJY-9I-ZKA" firstAttribute="top" secondItem="6Az-pK-eto" secondAttribute="topMargin" constant="-8" id="kHF-Nz-yU0"/>
+                                            <constraint firstItem="bJY-9I-ZKA" firstAttribute="leading" secondItem="6Az-pK-eto" secondAttribute="leadingMargin" constant="-8" id="na3-Lc-d18"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1EA-6m-vKA"/>
+                                                <exclude reference="5fN-Xy-gVE"/>
+                                                <exclude reference="d2X-LC-osh"/>
+                                                <exclude reference="kHF-Nz-yU0"/>
+                                            </mask>
+                                        </variation>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qm3-MO-Z8g" id="xfg-KT-wDj"/>
+                                    <outlet property="delegate" destination="Qm3-MO-Z8g" id="uxr-ee-B4G"/>
+                                </connections>
+                            </collectionView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27b-K0-5NW">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Eet-lU-h07"/>
+                                    <barButtonItem image="numberOne" id="3Ou-Ea-8Jl">
+                                        <connections>
+                                            <action selector="barButtonItem1:" destination="Qm3-MO-Z8g" id="Lx2-Fs-Hcz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iB5-6s-54e"/>
+                                    <barButtonItem image="numberTwo" id="eHA-H6-LlX">
+                                        <connections>
+                                            <action selector="barButtonItem2:" destination="Qm3-MO-Z8g" id="KlD-rk-x7C"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="spJ-gZ-Vaf"/>
+                                    <barButtonItem image="numberThree" id="2R1-iF-NVC">
+                                        <connections>
+                                            <action selector="barButtonItem3:" destination="Qm3-MO-Z8g" id="AVX-Ce-UVS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uPT-3r-OeO"/>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J67-4i-CNA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="kPD-wZ-ubR"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="TestTask" id="65G-jv-GdM"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A4h-0O-tp8" firstAttribute="top" secondItem="27b-K0-5NW" secondAttribute="bottom" id="7Mv-4T-HcB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J67-4i-CNA" secondAttribute="trailing" constant="-16" id="9hi-uM-VCz"/>
+                            <constraint firstItem="27b-K0-5NW" firstAttribute="leading" secondItem="mlG-vJ-EIa" secondAttribute="leadingMargin" constant="-16" id="IPs-Nb-FUJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="27b-K0-5NW" secondAttribute="trailing" constant="-16" id="QQi-uN-A2U"/>
+                            <constraint firstItem="A4h-0O-tp8" firstAttribute="top" secondItem="fXs-af-5uO" secondAttribute="bottom" id="VxD-mr-psm"/>
+                            <constraint firstItem="fXs-af-5uO" firstAttribute="leading" secondItem="mlG-vJ-EIa" secondAttribute="leadingMargin" constant="-16" id="gDB-5Q-Ly6"/>
+                            <constraint firstItem="J67-4i-CNA" firstAttribute="top" secondItem="mlG-vJ-EIa" secondAttribute="topMargin" id="qDz-WR-OgC"/>
+                            <constraint firstItem="fXs-af-5uO" firstAttribute="top" secondItem="mlG-vJ-EIa" secondAttribute="topMargin" id="rqC-Tc-oHz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fXs-af-5uO" secondAttribute="trailing" constant="-16" id="uax-RM-fUh"/>
+                            <constraint firstItem="J67-4i-CNA" firstAttribute="leading" secondItem="mlG-vJ-EIa" secondAttribute="leadingMargin" constant="-16" id="v2D-0k-G3H"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsl-sZ-6vZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="-372"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="numberOne" width="34" height="34"/>
+        <image name="numberThree" width="34" height="34"/>
+        <image name="numberTwo" width="34" height="34"/>
+    </resources>
+</document>
