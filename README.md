@@ -9,3 +9,4 @@
  
 При написании кода необходимо ориентироваться в первую очередь на его элегантность и продуманность архитектуры приложения. 
  
+![alt tag](https://raw.githubusercontent.com/NBibikov/TestTask/master/testPhotoViewer.gif)
